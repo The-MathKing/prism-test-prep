@@ -33,13 +33,16 @@ export default function Footer() {
           {/* Links */}
           <div className="flex items-center gap-6">
             <a
-              href="#"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-electric/30 text-electric text-sm font-semibold hover:bg-electric/10 transition-all duration-300"
+              href="/privacy-policy.html"
+              className="text-sm text-text-muted hover:text-electric transition-colors duration-300"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-              </svg>
-              Student Portal Login
+              Privacy Policy
+            </a>
+            <a
+              href="/terms-of-service.html"
+              className="text-sm text-text-muted hover:text-electric transition-colors duration-300"
+            >
+              Terms of Service
             </a>
           </div>
         </div>
