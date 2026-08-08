@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Curriculum from './components/Curriculum'
 import Methodology from './components/Methodology'
 import Instructors from './components/Instructors'
 import Services from './components/Services'
@@ -10,6 +11,7 @@ function App() {
     <div className="min-h-screen bg-navy">
       <Navbar />
       <Hero />
+      <Curriculum />
       <Methodology />
       <Instructors />
       <Services />

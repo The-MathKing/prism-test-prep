@@ -28,6 +28,7 @@ export default function Navbar() {
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
+          <a href="#curriculum" className="text-sm text-text-muted hover:text-electric transition-colors duration-300">Youth Tracks</a>
           <a href="#method" className="text-sm text-text-muted hover:text-electric transition-colors duration-300">Method</a>
           <a href="#tutors" className="text-sm text-text-muted hover:text-electric transition-colors duration-300">Tutors</a>
           <a href="#investment" className="text-sm text-text-muted hover:text-electric transition-colors duration-300">Investment</a>
@@ -56,6 +57,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-6 pb-6 flex flex-col gap-4">
+          <a href="#curriculum" onClick={() => setMenuOpen(false)} className="text-text-muted hover:text-electric transition-colors">Youth Tracks</a>
           <a href="#method" onClick={() => setMenuOpen(false)} className="text-text-muted hover:text-electric transition-colors">Method</a>
           <a href="#tutors" onClick={() => setMenuOpen(false)} className="text-text-muted hover:text-electric transition-colors">Tutors</a>
           <a href="#investment" onClick={() => setMenuOpen(false)} className="text-text-muted hover:text-electric transition-colors">Investment</a>
