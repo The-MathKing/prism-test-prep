@@ -10,62 +10,55 @@ export default function Hero() {
       <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-electric/8 -rotate-12 animate-pulse" style={{ animationDelay: '1s' }} />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-24">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-electric/20 bg-electric/5 mb-8 animate-fade-in-up">
-          <div className="w-2 h-2 rounded-full bg-electric animate-pulse" />
-          <span className="text-xs font-medium text-electric tracking-wide uppercase">Elite Digital SAT Coaching</span>
+        {/* Pre-headline */}
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-electric/20 mb-8 animate-fade-in-up">
+          <span className="w-2 h-2 rounded-full bg-electric animate-pulse"></span>
+          <span className="text-xs font-semibold text-text-muted uppercase tracking-[0.2em]">
+            Now Accepting Grades 1–10
+          </span>
         </div>
 
         {/* Headline */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 animate-fade-in-up animate-delay-100">
-          Master Module 2.{' '}
+          Math Acceleration.{' '}
           <br className="hidden sm:block" />
-          <span className="text-gradient">Break the 700+ Barrier.</span>
+          <span className="text-gradient">Elite Preparation.</span>
         </h1>
 
-        {/* Subtext */}
-        <p className="text-lg sm:text-xl text-text-muted max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up animate-delay-200">
-          Elite Digital SAT Math coaching focused strictly on adaptive algorithms,
-          complex systems, and advanced Desmos execution.
+        {/* Subheadline */}
+        <p className="text-lg sm:text-xl text-text-primary max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up animate-delay-200">
+          From unbreakable early foundations to a perfect 800 SAT score. Direct 1:1 mentorship by a USACO Platinum competitor and 1530 SAT scorer.
         </p>
 
+        {/* Stats row */}
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-12 mb-12 animate-fade-in-up animate-delay-300">
+          <div className="flex flex-col items-center">
+            <span className="text-3xl font-black text-electric mb-1">800</span>
+            <span className="text-xs text-text-muted uppercase tracking-widest">SAT Math</span>
+          </div>
+          <div className="w-px h-12 bg-electric/20 hidden sm:block"></div>
+          <div className="flex flex-col items-center">
+            <span className="text-3xl font-black text-electric mb-1">Top 500</span>
+            <span className="text-xs text-text-muted uppercase tracking-widest">USACO Rank</span>
+          </div>
+          <div className="w-px h-12 bg-electric/20 hidden sm:block"></div>
+          <div className="flex flex-col items-center">
+            <span className="text-3xl font-black text-electric mb-1">1st Place</span>
+            <span className="text-xs text-text-muted uppercase tracking-widest">State Coach</span>
+          </div>
+        </div>
+
         {/* CTA */}
-        <div className="animate-fade-in-up animate-delay-300">
+        <div className="animate-fade-in-up animate-delay-400">
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSfXTa5Kfnwd6TsTCOZ7ijmsJakfQABwBLsdrJSZfDFfq7Hq8Q/viewform?usp=publish-editor"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-electric text-navy font-bold text-lg rounded-xl glow-btn"
+            className="inline-flex items-center justify-center px-8 py-4 bg-electric text-navy font-bold text-lg rounded-xl glow-btn hover:scale-[1.02] transition-transform"
           >
-            Book a Diagnostic Session
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+            Book an Intake Session
           </a>
         </div>
-
-        {/* Stats row */}
-        <div className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto animate-fade-in-up animate-delay-400">
-          <div className="text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-electric">800</div>
-            <div className="text-xs text-text-dim mt-1 uppercase tracking-wider">SAT Math</div>
-          </div>
-          <div className="text-center border-x border-electric/10">
-            <div className="text-2xl sm:text-3xl font-bold text-electric">700+</div>
-            <div className="text-xs text-text-dim mt-1 uppercase tracking-wider">Target Score</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-electric">1:1</div>
-            <div className="text-xs text-text-dim mt-1 uppercase tracking-wider">Coaching</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-slow">
-        <svg className="w-6 h-6 text-text-dim" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
       </div>
     </section>
   )
