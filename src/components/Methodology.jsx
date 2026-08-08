@@ -3,7 +3,7 @@ const cards = [
     number: '01',
     title: 'The Reality of Early Childhood',
     description:
-      'Teaching a first grader is not about advanced mathematical logic; it is an exercise in behavioral management, attention retention, and foundational arithmetic. You cannot apply the Socratic method to a six-year-old learning basic addition.',
+      'Young minds require a fundamentally different approach to learning. We focus on building rock-solid arithmetic fluency and number sense through engaging, structured lessons, ensuring students master the basics before moving to complex logic.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -14,7 +14,7 @@ const cards = [
     number: '02',
     title: 'Role-Model Mentorship',
     description:
-      'For young children, parents invest heavily in early acceleration. Our primary selling point is not just teaching addition, but serving as a role model. We represent the end-goal: our tutors have perfect SAT scores, AIME qualifications, and national olympiad awards.',
+      'We don\'t just teach math; we show students what mathematical excellence looks like. By learning directly from mentors with perfect SAT scores and national olympiad awards, your child gains both an elite tutor and an inspiring role model.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -25,7 +25,7 @@ const cards = [
     number: '03',
     title: 'The Socratic Shift',
     description:
-      'As students enter the middle and high school phases, our pedagogy shifts. We deploy the Socratic method to coach students through AMC 8, USACO, and SAT Math curveballs—drawing on our firsthand experience competing at the highest national levels.',
+      'As students advance into middle and high school, our pedagogy evolves. We deploy the Socratic method to guide students through competitive math and complex SAT curveballs—drawing on our firsthand experience at the highest national levels.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
