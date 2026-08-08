@@ -3,21 +3,25 @@ const badges = [
     acronym: 'USAMO',
     full: 'USA Mathematical Olympiad',
     color: 'from-blue-400 to-cyan-400',
+    subtitle: 'Qualifiers',
   },
   {
     acronym: 'USAPhO',
     full: 'USA Physics Olympiad',
     color: 'from-violet-400 to-purple-400',
+    subtitle: 'Qualifiers',
   },
   {
     acronym: 'USACO',
     full: 'USA Computing Olympiad',
     color: 'from-emerald-400 to-teal-400',
+    subtitle: 'Platinum Division',
   },
   {
-    acronym: 'USABO',
-    full: 'USA Biology Olympiad',
+    acronym: 'USAEBO',
+    full: 'USA Economics and Business Olympiad',
     color: 'from-amber-400 to-orange-400',
+    subtitle: 'Gold Medalists',
   },
 ]
 
@@ -54,8 +58,8 @@ export default function Instructors() {
               <div className="text-xs text-text-dim uppercase tracking-wider leading-tight text-center">
                 {badge.full}
               </div>
-              <div className="mt-2 px-3 py-1 rounded-full bg-electric/10 text-electric text-[10px] font-semibold uppercase tracking-wider">
-                Qualifier
+              <div className="mt-2 px-3 py-1 rounded-full bg-electric/10 text-electric text-[10px] font-semibold uppercase tracking-wider text-center">
+                {badge.subtitle}
               </div>
             </div>
           ))}

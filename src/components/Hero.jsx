@@ -32,7 +32,7 @@ export default function Hero() {
         {/* CTA */}
         <div className="animate-fade-in-up animate-delay-300">
           <a
-            href="https://calendly.com"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfXTa5Kfnwd6TsTCOZ7ijmsJakfQABwBLsdrJSZfDFfq7Hq8Q/viewform?usp=publish-editor"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 bg-electric text-navy font-bold text-lg rounded-xl glow-btn"

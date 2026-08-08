@@ -32,7 +32,9 @@ export default function Navbar() {
           <a href="#tutors" className="text-sm text-text-muted hover:text-electric transition-colors duration-300">Tutors</a>
           <a href="#investment" className="text-sm text-text-muted hover:text-electric transition-colors duration-300">Investment</a>
           <a
-            href="#book"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfXTa5Kfnwd6TsTCOZ7ijmsJakfQABwBLsdrJSZfDFfq7Hq8Q/viewform?usp=publish-editor"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2.5 bg-electric text-navy font-semibold text-sm rounded-lg glow-btn"
           >
             Book Now
@@ -57,7 +59,7 @@ export default function Navbar() {
           <a href="#method" onClick={() => setMenuOpen(false)} className="text-text-muted hover:text-electric transition-colors">Method</a>
           <a href="#tutors" onClick={() => setMenuOpen(false)} className="text-text-muted hover:text-electric transition-colors">Tutors</a>
           <a href="#investment" onClick={() => setMenuOpen(false)} className="text-text-muted hover:text-electric transition-colors">Investment</a>
-          <a href="#book" onClick={() => setMenuOpen(false)} className="px-5 py-2.5 bg-electric text-navy font-semibold text-sm rounded-lg text-center glow-btn">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXTa5Kfnwd6TsTCOZ7ijmsJakfQABwBLsdrJSZfDFfq7Hq8Q/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="px-5 py-2.5 bg-electric text-navy font-semibold text-sm rounded-lg text-center glow-btn">
             Book Now
           </a>
         </div>

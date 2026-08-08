@@ -62,7 +62,7 @@ export default function Services() {
 
             {/* CTA */}
             <a
-              href="https://calendly.com"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfXTa5Kfnwd6TsTCOZ7ijmsJakfQABwBLsdrJSZfDFfq7Hq8Q/viewform?usp=publish-editor"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center px-8 py-4 bg-electric text-navy font-bold text-lg rounded-xl glow-btn"
