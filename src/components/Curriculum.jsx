@@ -1,39 +1,66 @@
-const phases = [
+const categories = [
   {
-    number: '01',
-    title: 'Early Foundations',
-    grades: 'Grades 1-4',
-    focus: 'Number sense, mental math speed, basic arithmetic fluency, and early logic puzzles.',
-    anchor: 'Building an unbreakable mathematical foundation and instilling study discipline early through direct role-model mentorship.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
-      </svg>
-    ),
+    id: 'elementary',
+    title: 'Elementary Foundations',
+    subtitle: 'Grades 1–5',
+    description: 'Mastering the core mathematical mechanisms required before entering middle school.',
+    courses: [
+      {
+        name: 'Level 1: Number Sense',
+        grades: 'Grades 1-2',
+        focus: 'Addition, subtraction, place value, and mental math speed.',
+      },
+      {
+        name: 'Level 2: Core Computations',
+        grades: 'Grades 3-4',
+        focus: 'Multiplication tables, long division, and introductory word problems.',
+      },
+      {
+        name: 'Level 3: Fractions & Decimals',
+        grades: 'Grade 5',
+        focus: 'The bridge to middle school math. Fixes the most common failure point before Pre-Algebra.',
+      },
+    ],
   },
   {
-    number: '02',
-    title: 'The Accelerated Middle Track',
-    grades: 'Grades 5-8',
-    focus: 'Pre-Algebra, Algebra I, Geometry, and introductory contest math (AMC 8, MATHCOUNTS).',
-    anchor: 'Getting ahead of public school curriculum. Leverages direct experience coaching a middle school team to 1st Place at State.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-    ),
+    id: 'core',
+    title: 'Academic Core',
+    subtitle: 'Grades 6–10',
+    description: 'Standardized secondary school tracks designed for rapid acceleration and mastery.',
+    courses: [
+      {
+        name: 'Pre-Algebra',
+        focus: 'Foundational variables, linear equations, and basic geometry.',
+      },
+      {
+        name: 'Algebra 1',
+        focus: 'Functions, polynomials, and graphing mechanics.',
+      },
+      {
+        name: 'Geometry',
+        focus: 'Proofs, spatial reasoning, and trigonometry introduction.',
+      },
+      {
+        name: 'Algebra 2',
+        focus: 'Advanced functions, logarithms, and complex numbers.',
+      },
+    ],
   },
   {
-    number: '03',
-    title: 'Early High School & SAT Math',
-    grades: 'Grades 9-10',
-    focus: 'Advanced Algebra, SAT Math (Desmos mechanics, Module 2 curveballs), and AMC 10 prep.',
-    anchor: 'Early mastery of standardized testing to secure a 700+ baseline before junior year, utilizing a perfect 800 score as proof of concept.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
+    id: 'elite',
+    title: 'Elite & Competitive',
+    subtitle: 'Grades 6–10',
+    description: 'Premium tiers anchored by a 1530 SAT score and 1st Place Texas State MATHCOUNTS finish.',
+    courses: [
+      {
+        name: 'MATHCOUNTS / AMC 8',
+        focus: 'Socratic problem-solving for competitive middle school math teams.',
+      },
+      {
+        name: 'DSAT Math / AMC 10',
+        focus: 'Advanced adaptive strategies and Desmos mechanics for early high schoolers.',
+      },
+    ],
   },
 ]
 
@@ -47,44 +74,52 @@ export default function Curriculum() {
         {/* Section header */}
         <div className="text-center mb-16">
           <span className="text-xs font-semibold text-electric uppercase tracking-[0.2em] mb-4 block">
-            K-10 Math Pipeline
+            Course Catalog
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            A Continuous Architecture
+            Granular Curriculum
           </h2>
           <p className="text-text-muted max-w-xl mx-auto">
-            Strictly defining our niche as math acceleration and elite preparation, from age 5 through 10th grade.
+            Select the exact academic bottleneck your child is facing. We provide specialized instruction across the entire K-10 spectrum.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {phases.map((phase) => (
+        {/* Categories Grid */}
+        <div className="grid lg:grid-cols-3 gap-8">
+          {categories.map((category) => (
             <div
-              key={phase.number}
-              className="card-glow rounded-2xl bg-navy-light/60 p-8 flex flex-col"
+              key={category.id}
+              className="flex flex-col rounded-3xl bg-navy-light/40 border border-electric/10 overflow-hidden"
             >
-              {/* Card header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-electric/10 flex items-center justify-center text-electric shrink-0">
-                    {phase.icon}
-                  </div>
-                  <span className="text-xs font-mono text-electric/40">Phase {phase.number}</span>
+              {/* Category Header */}
+              <div className="p-8 border-b border-electric/10 bg-electric/5">
+                <div className="text-xs font-bold text-electric uppercase tracking-[0.15em] mb-2">
+                  {category.subtitle}
                 </div>
-                <div className="px-3 py-1 rounded-full bg-slate-dark text-text-dim text-[10px] font-semibold uppercase tracking-wider">
-                  {phase.grades}
-                </div>
+                <h3 className="text-2xl font-bold mb-3">{category.title}</h3>
+                <p className="text-sm text-text-muted leading-relaxed">
+                  {category.description}
+                </p>
               </div>
 
-              <h3 className="text-xl font-bold mb-3 leading-snug">{phase.title}</h3>
-              <p className="text-text-primary text-sm leading-relaxed mb-4">
-                <span className="text-electric font-semibold">Focus:</span> {phase.focus}
-              </p>
-              
-              <p className="text-text-muted text-sm leading-relaxed flex-1 pt-4 border-t border-electric/10">
-                <span className="text-white/70 font-semibold">Value Prop:</span> {phase.anchor}
-              </p>
+              {/* Course List */}
+              <div className="p-8 flex-1 flex flex-col gap-6">
+                {category.courses.map((course, idx) => (
+                  <div key={idx} className="relative pl-5 before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-electric before:rounded-full">
+                    <h4 className="text-base font-bold text-text-primary mb-1">
+                      {course.name}
+                      {course.grades && (
+                        <span className="ml-2 text-[10px] uppercase tracking-wider text-text-muted font-normal bg-navy-lighter px-2 py-0.5 rounded-full">
+                          {course.grades}
+                        </span>
+                      )}
+                    </h4>
+                    <p className="text-sm text-text-muted leading-relaxed">
+                      {course.focus}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>

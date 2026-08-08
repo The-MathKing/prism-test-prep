@@ -1,5 +1,5 @@
 const features = [
-  'Choice of Early Foundations, Accelerated Middle, or SAT tracks',
+  'Choice of Elementary Foundations, Academic Core, or Elite Competition courses',
   'Pedagogy tailored to age: behavioral management to Socratic logic',
   'Rigorous homework and progress tracking across all phases',
   'Temple Partnership Discount (15-20% off for members)',
