@@ -14,7 +14,7 @@ const cards = [
     number: '02',
     title: 'Role-Model Mentorship',
     description:
-      'For young children, parents invest heavily in early acceleration. Our primary selling point is not just teaching addition, but serving as a role model. We represent the end-goal: a student with an 800 Math SAT score, AIME qualifications, and elite GPA.',
+      'For young children, parents invest heavily in early acceleration. Our primary selling point is not just teaching addition, but serving as a role model. We represent the end-goal: our tutors have perfect SAT scores, AIME qualifications, and national olympiad awards.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -25,7 +25,7 @@ const cards = [
     number: '03',
     title: 'The Socratic Shift',
     description:
-      'As students enter the middle and high school phases, our pedagogy shifts. We deploy the Socratic method to coach students through AMC 8, USACO, and SAT Math curveballs—the exact method used to coach an Ereckson team to 1st Place at State.',
+      'As students enter the middle and high school phases, our pedagogy shifts. We deploy the Socratic method to coach students through AMC 8, USACO, and SAT Math curveballs—drawing on our firsthand experience competing at the highest national levels.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />

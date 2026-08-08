@@ -27,24 +27,19 @@ export default function Hero() {
 
         {/* Subheadline */}
         <p className="text-lg sm:text-xl text-text-primary max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up animate-delay-200">
-          From unbreakable early foundations to a perfect 800 SAT score. Direct 1:1 mentorship by a USACO Platinum competitor and 1530 SAT scorer.
+          From unbreakable early foundations to advanced competition math. Direct 1:1 mentorship by tutors with perfect SAT scores and national olympiad awards.
         </p>
 
         {/* Stats row */}
         <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-12 mb-12 animate-fade-in-up animate-delay-300">
           <div className="flex flex-col items-center">
-            <span className="text-3xl font-black text-electric mb-1">800</span>
-            <span className="text-xs text-text-muted uppercase tracking-widest">SAT Math</span>
+            <span className="text-3xl font-black text-electric mb-1">800s</span>
+            <span className="text-xs text-text-muted uppercase tracking-widest">SAT Math Tutors</span>
           </div>
           <div className="w-px h-12 bg-electric/20 hidden sm:block"></div>
           <div className="flex flex-col items-center">
-            <span className="text-3xl font-black text-electric mb-1">Top 500</span>
-            <span className="text-xs text-text-muted uppercase tracking-widest">USACO Rank</span>
-          </div>
-          <div className="w-px h-12 bg-electric/20 hidden sm:block"></div>
-          <div className="flex flex-col items-center">
-            <span className="text-3xl font-black text-electric mb-1">1st Place</span>
-            <span className="text-xs text-text-muted uppercase tracking-widest">State Coach</span>
+            <span className="text-3xl font-black text-electric mb-1">National</span>
+            <span className="text-xs text-text-muted uppercase tracking-widest">Olympiad Awards</span>
           </div>
         </div>
 

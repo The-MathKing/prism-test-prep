@@ -50,7 +50,7 @@ const categories = [
     id: 'elite',
     title: 'Elite & Competitive',
     subtitle: 'Grades 6–10',
-    description: 'Premium tiers anchored by a 1530 SAT score and 1st Place Texas State MATHCOUNTS finish.',
+    description: 'Premium tiers anchored by tutors with perfect SAT scores and national olympiad awards.',
     courses: [
       {
         name: 'MATHCOUNTS / AMC 8',
