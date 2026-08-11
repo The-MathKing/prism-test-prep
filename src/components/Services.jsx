@@ -23,7 +23,7 @@ export default function Services() {
             One Tier. No Compromises.
           </h2>
           <p className="text-text-muted max-w-xl mx-auto">
-            A singular, transparent rate for our entire K-10 pipeline. Discounts are structured to support our community.
+            A singular, transparent rate for our entire K-8 pipeline. Discounts are structured to support our community.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export default function Services() {
             <div className="mb-8 pb-8 border-b border-electric/10">
               <div className="flex justify-between items-start mb-2">
                 <div className="text-xs font-semibold text-electric uppercase tracking-[0.15em]">
-                  K-10 Math Pipeline
+                  K-8 Math Pipeline
                 </div>
                 <span className="px-3 py-1 bg-electric/10 text-electric text-[10px] font-bold uppercase tracking-wider rounded-full">
                   1-ON-1

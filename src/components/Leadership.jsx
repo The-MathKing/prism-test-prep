@@ -36,7 +36,7 @@ const Leadership = () => {
               </div>
               <h3 className="text-3xl font-bold text-white mb-2">Aryan Padarthi</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                High school researcher and elite STEM competitor dedicated to democratizing advanced education through near-peer mentorship and community reinvestment.
+                Elite STEM competitor dedicated to democratizing advanced education through near-peer mentorship and community reinvestment.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
