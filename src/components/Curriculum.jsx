@@ -33,7 +33,7 @@ const sprints = [
 
 export default function Curriculum() {
   return (
-    <section id="curriculum" className="relative py-24 sm:py-32 bg-[#050505]">
+    <section id="programs" className="relative py-24 sm:py-32 bg-[#050505]">
       
       <div className="max-w-7xl mx-auto px-6">
         
@@ -84,17 +84,6 @@ export default function Curriculum() {
                   {sprint.focus}
                 </p>
               </div>
-
-              <div className="flex items-start gap-3 bg-emerald-500/5 rounded-xl p-4 border border-emerald-500/10">
-                <span className="text-[10px] font-bold text-emerald-500 uppercase tracking-wider block mt-0.5 shrink-0">
-                  Authority Anchor:
-                </span>
-                <p className="text-emerald-400 text-xs font-bold leading-relaxed">
-                  {sprint.anchor}
-                </p>
-              </div>
-
-            </div>
           ))}
         </div>
 
