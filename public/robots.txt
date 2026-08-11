@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /student-dashboard
+Disallow: /instructor-dashboard
+Disallow: /parent-dashboard
+Disallow: /partner-dashboard
+
+Sitemap: https://clovrr.net/sitemap.xml
