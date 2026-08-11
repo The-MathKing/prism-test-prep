@@ -84,6 +84,7 @@ export default function Curriculum() {
                   {sprint.focus}
                 </p>
               </div>
+            </div>
           ))}
         </div>
 
