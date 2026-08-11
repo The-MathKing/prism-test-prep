@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import InstructorDashboard from './pages/InstructorDashboard';
+import StudentDashboard from './pages/StudentDashboard';
+import ParentDashboard from './pages/ParentDashboard';
+import PartnerDashboard from './pages/PartnerDashboard';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 
@@ -14,6 +17,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/instructor-dashboard" element={<InstructorDashboard />} />
+          <Route path="/student-dashboard" element={<StudentDashboard />} />
+          <Route path="/parent-dashboard" element={<ParentDashboard />} />
+          <Route path="/partner-dashboard" element={<PartnerDashboard />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
         </Routes>

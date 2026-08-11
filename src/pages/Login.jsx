@@ -1,14 +1,18 @@
-import React from 'react';
-import { Hexagon, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Hexagon, ArrowRight, User, Users, GraduationCap, Building } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigate = useNavigate();
+  const [role, setRole] = useState('student');
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Simulate login for now
-    navigate('/instructor-dashboard');
+    // Simulate role-based redirect
+    if (role === 'instructor') navigate('/instructor-dashboard');
+    else if (role === 'student') navigate('/student-dashboard');
+    else if (role === 'parent') navigate('/parent-dashboard');
+    else if (role === 'partner') navigate('/partner-dashboard');
   };
 
   return (
@@ -24,10 +28,45 @@ const Login = () => {
             <span className="font-sans font-black text-3xl tracking-tighter text-white">Clovrr.</span>
           </Link>
           <h2 className="text-2xl font-bold text-white mb-2">Welcome back</h2>
-          <p className="text-gray-400 text-sm">Enter your credentials to access your portal</p>
+          <p className="text-gray-400 text-sm">Select your role and sign in</p>
         </div>
 
         <div className="bg-[#0a0a0a] rounded-3xl border border-white/10 shadow-2xl p-8">
+          <div className="grid grid-cols-2 gap-3 mb-8">
+            <button 
+              type="button"
+              onClick={() => setRole('student')}
+              className={`p-3 rounded-xl border flex flex-col items-center gap-2 transition-all ${role === 'student' ? 'bg-emerald-500/20 border-emerald-500/50 text-emerald-400' : 'bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white'}`}
+            >
+              <GraduationCap className="h-5 w-5" />
+              <span className="text-xs font-bold uppercase tracking-wider">Student</span>
+            </button>
+            <button 
+              type="button"
+              onClick={() => setRole('parent')}
+              className={`p-3 rounded-xl border flex flex-col items-center gap-2 transition-all ${role === 'parent' ? 'bg-blue-500/20 border-blue-500/50 text-blue-400' : 'bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white'}`}
+            >
+              <Users className="h-5 w-5" />
+              <span className="text-xs font-bold uppercase tracking-wider">Parent</span>
+            </button>
+            <button 
+              type="button"
+              onClick={() => setRole('partner')}
+              className={`p-3 rounded-xl border flex flex-col items-center gap-2 transition-all ${role === 'partner' ? 'bg-orange-500/20 border-orange-500/50 text-orange-400' : 'bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white'}`}
+            >
+              <Building className="h-5 w-5" />
+              <span className="text-xs font-bold uppercase tracking-wider">Partner (CSR)</span>
+            </button>
+            <button 
+              type="button"
+              onClick={() => setRole('instructor')}
+              className={`p-3 rounded-xl border flex flex-col items-center gap-2 transition-all ${role === 'instructor' ? 'bg-purple-500/20 border-purple-500/50 text-purple-400' : 'bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white'}`}
+            >
+              <User className="h-5 w-5" />
+              <span className="text-xs font-bold uppercase tracking-wider">Instructor</span>
+            </button>
+          </div>
+
           <form onSubmit={handleLogin} className="space-y-6">
             <div className="space-y-2">
               <label className="text-sm font-medium text-gray-300">Email Address</label>
@@ -53,14 +92,10 @@ const Login = () => {
             </div>
 
             <button type="submit" className="w-full bg-emerald-500 hover:bg-emerald-400 text-black font-bold py-3.5 rounded-xl transition-colors flex items-center justify-center gap-2 mt-4">
-              Sign In
+              Sign In to Demo
               <ArrowRight className="h-4 w-4" />
             </button>
           </form>
-
-          <div className="mt-8 text-center text-sm text-gray-500">
-            <p>Don't have an account? <a href="#" className="text-emerald-500 hover:text-emerald-400 font-medium">Contact administration</a></p>
-          </div>
         </div>
         
         <div className="text-center mt-12 text-xs text-gray-600">

@@ -32,12 +32,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="https://forms.google.com/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 rounded-full bg-primary hover:bg-primary-hover text-white font-semibold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(5,150,105,0.4)] flex items-center justify-center gap-2">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXTa5Kfnwd6TsTCOZ7ijmsJakfQABwBLsdrJSZfDFfq7Hq8Q/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 rounded-full bg-primary hover:bg-primary-hover text-white font-semibold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(5,150,105,0.4)] flex items-center justify-center gap-2">
               Enroll Student
               <ArrowRight className="h-5 w-5" />
             </a>
             
-            <a href="https://forms.google.com/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 rounded-full glass hover:bg-white/10 text-white font-semibold text-lg transition-all flex items-center justify-center">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScOQxm2t7tHM_55QooT6_mApD8ySYf1RY_ppAd8LP4K1cBW6Q/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 rounded-full glass hover:bg-white/10 text-white font-semibold text-lg transition-all flex items-center justify-center">
               Partner With Us (CSR)
             </a>
           </div>

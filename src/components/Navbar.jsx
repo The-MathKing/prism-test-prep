@@ -19,7 +19,7 @@ const Navbar = () => {
             <a href="/#programs" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Programs</a>
             <a href="/#leadership" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Leadership</a>
             <Link to="/login" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Partner Login</Link>
-            <a href="https://forms.google.com/" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(5,150,105,0.4)]">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXTa5Kfnwd6TsTCOZ7ijmsJakfQABwBLsdrJSZfDFfq7Hq8Q/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(5,150,105,0.4)]">
               Enroll Student
             </a>
           </div>
@@ -39,7 +39,7 @@ const Navbar = () => {
             <a href="/#programs" className="block text-gray-300 hover:text-white font-medium py-2">Programs</a>
             <a href="/#leadership" className="block text-gray-300 hover:text-white font-medium py-2">Leadership</a>
             <Link to="/login" className="block text-gray-300 hover:text-white font-medium py-2">Partner Login</Link>
-            <a href="https://forms.google.com/" target="_blank" rel="noopener noreferrer" className="block text-center bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full font-medium w-full mt-2">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXTa5Kfnwd6TsTCOZ7ijmsJakfQABwBLsdrJSZfDFfq7Hq8Q/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="block text-center bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full font-medium w-full mt-2">
               Enroll Student
             </a>
           </div>
