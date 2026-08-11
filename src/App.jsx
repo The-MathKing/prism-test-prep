@@ -9,6 +9,7 @@ import PartnerDashboard from './pages/PartnerDashboard';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import LeadershipPage from './pages/LeadershipPage';
+import AdminDashboard from './pages/AdminDashboard';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/leadership" element={<LeadershipPage />} />
+          <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
       </Router>
     </div>
