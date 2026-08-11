@@ -1,60 +1,50 @@
-export default function Hero() {
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Globe } from 'lucide-react';
+
+const Hero = () => {
   return (
-    <section id="book" className="relative min-h-screen flex items-center justify-center geometric-mesh overflow-hidden">
-      {/* Radial glow overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,oklch(0.65_0.22_250_/_0.08)_0%,transparent_70%)]" />
+    <div className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+      {/* Background glow effects */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Floating geometric shapes */}
-      <div className="absolute top-20 left-10 w-32 h-32 border border-electric/10 rotate-45 animate-pulse" />
-      <div className="absolute bottom-32 right-16 w-24 h-24 border border-electric/5 rotate-12" />
-      <div className="absolute top-1/3 right-1/4 w-16 h-16 border border-electric/8 -rotate-12 animate-pulse" style={{ animationDelay: '1s' }} />
-
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-24">
-        {/* Pre-headline */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-electric/20 mb-8 animate-fade-in-up">
-          <span className="w-2 h-2 rounded-full bg-electric animate-pulse"></span>
-          <span className="text-xs font-semibold text-text-muted uppercase tracking-[0.2em]">
-            Now Accepting Grades 1–10
-          </span>
-        </div>
-
-        {/* Headline */}
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6 animate-fade-in-up animate-delay-100">
-          Math Acceleration.{' '}
-          <br className="hidden sm:block" />
-          <span className="text-gradient">Elite Preparation.</span>
-        </h1>
-
-        {/* Subheadline */}
-        <p className="text-lg sm:text-xl text-text-primary max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up animate-delay-200">
-          From unbreakable early foundations to advanced competition math. Direct 1:1 mentorship by tutors with perfect SAT scores and national olympiad awards.
-        </p>
-
-        {/* Stats row */}
-        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-12 mb-12 animate-fade-in-up animate-delay-300">
-          <div className="flex flex-col items-center">
-            <span className="text-3xl font-black text-electric mb-1">800s</span>
-            <span className="text-xs text-text-muted uppercase tracking-widest">SAT Math Tutors</span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8 border-primary/30 text-sm font-medium text-emerald-300">
+            <Globe className="h-4 w-4" />
+            <span>Community-Driven Impact</span>
           </div>
-          <div className="w-px h-12 bg-electric/20 hidden sm:block"></div>
-          <div className="flex flex-col items-center">
-            <span className="text-3xl font-black text-electric mb-1">National</span>
-            <span className="text-xs text-text-muted uppercase tracking-widest">Olympiad Awards</span>
-          </div>
-        </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold font-sans tracking-tight mb-6 leading-tight">
+            Near-Peer STEM Acceleration. <br className="hidden md:block" />
+            <span className="text-gradient">Community-Driven Impact.</span>
+          </h1>
+          
+          <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+            Elite 1:1 and small-group STEM coaching (Grades 1–10) in Math, Physics, Biology, and Chemistry. 
+            <strong className="text-gray-200 font-semibold"> 15% of all tuition goes directly back to your local community center or religious organization.</strong>
+          </p>
 
-        {/* CTA */}
-        <div className="animate-fade-in-up animate-delay-400">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfXTa5Kfnwd6TsTCOZ7ijmsJakfQABwBLsdrJSZfDFfq7Hq8Q/viewform?usp=publish-editor"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-4 bg-electric text-navy font-bold text-lg rounded-xl glow-btn hover:scale-[1.02] transition-transform"
-          >
-            Book an Intake Session
-          </a>
-        </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-primary hover:bg-primary-hover text-white font-semibold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(5,150,105,0.4)] flex items-center justify-center gap-2">
+              Enroll Student
+              <ArrowRight className="h-5 w-5" />
+            </button>
+            
+            <button className="w-full sm:w-auto px-8 py-4 rounded-full glass hover:bg-white/10 text-white font-semibold text-lg transition-all flex items-center justify-center">
+              Partner With Us (CSR)
+            </button>
+          </div>
+        </motion.div>
       </div>
-    </section>
-  )
-}
+    </div>
+  );
+};
+
+export default Hero;

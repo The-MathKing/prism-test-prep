@@ -1,71 +1,51 @@
-import { useState } from 'react'
+import React from 'react';
+import { Hexagon, Menu, X } from 'lucide-react';
 
-export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false)
+const Navbar = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 relative">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="16,2 30,28 2,28" stroke="url(#prism-grad)" strokeWidth="2" fill="none" />
-              <defs>
-                <linearGradient id="prism-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#60a5fa" />
-                  <stop offset="50%" stopColor="oklch(0.65 0.22 250)" />
-                  <stop offset="100%" stopColor="#a78bfa" />
-                </linearGradient>
-              </defs>
-            </svg>
+    <nav className="fixed w-full z-50 glass border-b border-white/10 top-0 left-0 transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          <div className="flex items-center gap-2">
+            <Hexagon className="text-primary h-8 w-8" />
+            <span className="font-sans font-bold text-2xl tracking-tight text-white">Clovrr</span>
           </div>
-          <span className="text-xl font-bold tracking-tight">
-            <span className="prism-gradient">PRISM</span>
-            <span className="text-text-muted font-light ml-1">prep</span>
-          </span>
-        </a>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
-          <a href="#curriculum" className="text-sm text-text-muted hover:text-electric transition-colors duration-300">Youth Tracks</a>
-          <a href="#method" className="text-sm text-text-muted hover:text-electric transition-colors duration-300">Method</a>
-          <a href="#tutors" className="text-sm text-text-muted hover:text-electric transition-colors duration-300">Tutors</a>
-          <a href="#investment" className="text-sm text-text-muted hover:text-electric transition-colors duration-300">Investment</a>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfXTa5Kfnwd6TsTCOZ7ijmsJakfQABwBLsdrJSZfDFfq7Hq8Q/viewform?usp=publish-editor"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-electric text-navy font-semibold text-sm rounded-lg glow-btn"
-          >
-            Book Now
-          </a>
-        </div>
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#method" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">The Method</a>
+            <a href="#programs" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Programs</a>
+            <a href="#leadership" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Leadership</a>
+            <a href="#" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Partner Login</a>
+            <button className="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(5,150,105,0.4)]">
+              Enroll Student
+            </button>
+          </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className={`w-6 h-0.5 bg-text-primary transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`w-6 h-0.5 bg-text-primary transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-          <span className={`w-6 h-0.5 bg-text-primary transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'}`}>
-        <div className="px-6 pb-6 flex flex-col gap-4">
-          <a href="#curriculum" onClick={() => setMenuOpen(false)} className="text-text-muted hover:text-electric transition-colors">Youth Tracks</a>
-          <a href="#method" onClick={() => setMenuOpen(false)} className="text-text-muted hover:text-electric transition-colors">Method</a>
-          <a href="#tutors" onClick={() => setMenuOpen(false)} className="text-text-muted hover:text-electric transition-colors">Tutors</a>
-          <a href="#investment" onClick={() => setMenuOpen(false)} className="text-text-muted hover:text-electric transition-colors">Investment</a>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXTa5Kfnwd6TsTCOZ7ijmsJakfQABwBLsdrJSZfDFfq7Hq8Q/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="px-5 py-2.5 bg-electric text-navy font-semibold text-sm rounded-lg text-center glow-btn">
-            Book Now
-          </a>
+          <div className="md:hidden flex items-center">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 hover:text-white">
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
       </div>
+
+      {isOpen && (
+        <div className="md:hidden glass-dark absolute top-20 left-0 w-full border-b border-white/10">
+          <div className="px-4 pt-2 pb-6 space-y-4 flex flex-col">
+            <a href="#method" className="block text-gray-300 hover:text-white font-medium py-2">The Method</a>
+            <a href="#programs" className="block text-gray-300 hover:text-white font-medium py-2">Programs</a>
+            <a href="#leadership" className="block text-gray-300 hover:text-white font-medium py-2">Leadership</a>
+            <a href="#" className="block text-gray-300 hover:text-white font-medium py-2">Partner Login</a>
+            <button className="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-full font-medium w-full mt-2">
+              Enroll Student
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
-  )
-}
+  );
+};
+
+export default Navbar;

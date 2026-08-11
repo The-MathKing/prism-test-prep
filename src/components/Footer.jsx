@@ -1,59 +1,62 @@
-export default function Footer() {
+import React from 'react';
+import { Hexagon, Mail, MapPin } from 'lucide-react';
+
+const Footer = () => {
   return (
-    <footer className="relative py-12 bg-navy border-t border-electric/10">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-          {/* Logo & location */}
-          <div>
-            <div className="flex items-center gap-2 mb-3">
-              <svg viewBox="0 0 32 32" fill="none" className="w-6 h-6">
-                <polygon points="16,2 30,28 2,28" stroke="url(#footer-grad)" strokeWidth="2" fill="none" />
-                <defs>
-                  <linearGradient id="footer-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#60a5fa" />
-                    <stop offset="50%" stopColor="oklch(0.65 0.22 250)" />
-                    <stop offset="100%" stopColor="#a78bfa" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              <span className="text-lg font-bold tracking-tight">
-                <span className="prism-gradient">PRISM</span>
-                <span className="text-text-muted font-light ml-1">prep</span>
-              </span>
+    <footer className="bg-[#050b14] border-t border-white/10 pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          
+          <div className="col-span-1 md:col-span-2">
+            <div className="flex items-center gap-2 mb-4">
+              <Hexagon className="text-primary h-8 w-8" />
+              <span className="font-sans font-bold text-2xl tracking-tight text-white">Clovrr</span>
             </div>
-            <p className="text-text-dim text-sm flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              Serving Allen, TX &amp; remote students nationwide
+            <p className="text-gray-400 max-w-sm mb-6">
+              Near-peer STEM acceleration and competition coaching built on a CSR engine. Reinvesting in our communities, one student at a time.
             </p>
+            <div className="flex items-center gap-3 text-gray-400 mb-2">
+              <MapPin className="h-5 w-5 text-emerald-500" />
+              <span>Serving Allen, TX & Remote Students Nationwide</span>
+            </div>
+            <div className="flex items-center gap-3 text-gray-400">
+              <Mail className="h-5 w-5 text-emerald-500" />
+              <a href="mailto:contact@clovrrlearning.com" className="hover:text-white transition-colors">contact@clovrrlearning.com</a>
+            </div>
           </div>
 
-          {/* Links */}
-          <div className="flex items-center gap-6">
-            <a
-              href="/privacy-policy.html"
-              className="text-sm text-text-muted hover:text-electric transition-colors duration-300"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="/terms-of-service.html"
-              className="text-sm text-text-muted hover:text-electric transition-colors duration-300"
-            >
-              Terms of Service
-            </a>
+          <div>
+            <h4 className="text-white font-semibold mb-4 text-lg">Portals</h4>
+            <ul className="space-y-3">
+              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">Partner Login (CSR)</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">Student Portal Link</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">Instructor Dashboard</a></li>
+            </ul>
           </div>
+
+          <div>
+            <h4 className="text-white font-semibold mb-4 text-lg">Programs</h4>
+            <ul className="space-y-3">
+              <li><a href="#programs" className="text-gray-400 hover:text-emerald-400 transition-colors">Group Cohorts</a></li>
+              <li><a href="#programs" className="text-gray-400 hover:text-emerald-400 transition-colors">Founder 1:1 Coaching</a></li>
+              <li><a href="#method" className="text-gray-400 hover:text-emerald-400 transition-colors">The Clovrr Method</a></li>
+            </ul>
+          </div>
+
         </div>
 
-        {/* Copyright */}
-        <div className="mt-10 pt-6 border-t border-white/5 text-center">
-          <p className="text-text-dim text-xs">
-            &copy; {new Date().getFullYear()} Prism Test Prep. All rights reserved.
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-500 text-sm">
+            &copy; {new Date().getFullYear()} Clovrr STEM Learning. All rights reserved.
           </p>
+          <div className="flex gap-4">
+            <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+            <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>
+          </div>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;
