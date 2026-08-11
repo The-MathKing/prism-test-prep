@@ -128,7 +128,7 @@ function OverviewTab() {
           <h3 className="text-lg font-bold text-white mb-6">Recent Platform Activity</h3>
           <div className="space-y-4">
             {[
-              { log: 'New student enrolled in DSAT Module 2', time: '10 mins ago', type: 'enrollment' },
+              { log: 'New student enrolled in Algorithmic Logic Sprint', time: '10 mins ago', type: 'enrollment' },
               { log: 'CSR Partner "Houston Hindu Temple" paid out $450', time: '2 hours ago', type: 'financial' },
               { log: 'Instructor Aryan P. completed "MathCounts" session', time: '5 hours ago', type: 'academic' },
               { log: 'New parent account created', time: '1 day ago', type: 'system' }
@@ -148,9 +148,9 @@ function OverviewTab() {
           <h3 className="text-lg font-bold text-white mb-6">Upcoming Sprints (Next 7 Days)</h3>
           <div className="space-y-4">
             {[
-              { class: 'AP Physics Kinematics Boot Camp', instructor: 'Aryan P.', students: '5/6', date: 'Tomorrow, 5:00 PM' },
+              { class: 'Algorithmic Logic: Pre-USACO', instructor: 'Aryan P.', students: '5/6', date: 'Tomorrow, 5:00 PM' },
               { class: 'AMC 8 Contest Foundations', instructor: 'Aryan P.', students: '6/6', date: 'Wednesday, 4:30 PM' },
-              { class: 'Fractions & Ratios Speed Sprint', instructor: 'Sarah J.', students: '4/6', date: 'Thursday, 4:00 PM' },
+              { class: 'Academic Acceleration: Pre-Algebra', instructor: 'Sarah J.', students: '4/6', date: 'Thursday, 4:00 PM' },
             ].map((sprint, i) => (
               <div key={i} className="bg-white/5 rounded-xl p-4 flex items-center justify-between">
                 <div>
@@ -286,7 +286,7 @@ function CohortsTab() {
       <div className="grid lg:grid-cols-2 gap-6">
         {[
           {
-            title: 'DSAT Module 2 Hard-Curve Sprint',
+            title: 'Algorithmic Logic: Pre-USACO & Robotics',
             instructor: 'Aryan Padarthi',
             time: 'Sundays, 4:00 PM CST',
             enrolled: 5,
