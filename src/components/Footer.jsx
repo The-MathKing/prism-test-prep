@@ -1,5 +1,6 @@
 import React from 'react';
 import { Hexagon, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -21,25 +22,25 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-3 text-gray-400">
               <Mail className="h-5 w-5 text-emerald-500" />
-              <a href="mailto:contact@clovrrlearning.com" className="hover:text-white transition-colors">contact@clovrrlearning.com</a>
+              <a href="mailto:aryan.r.padarthi@gmail.com" className="hover:text-white transition-colors">aryan.r.padarthi@gmail.com</a>
             </div>
           </div>
 
           <div>
             <h4 className="text-white font-semibold mb-4 text-lg">Portals</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">Partner Login (CSR)</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">Student Portal Link</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">Instructor Dashboard</a></li>
+              <li><Link to="/login" className="text-gray-400 hover:text-emerald-400 transition-colors">Partner Login (CSR)</Link></li>
+              <li><Link to="/login" className="text-gray-400 hover:text-emerald-400 transition-colors">Student Portal Link</Link></li>
+              <li><Link to="/instructor-dashboard" className="text-gray-400 hover:text-emerald-400 transition-colors">Instructor Dashboard</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-semibold mb-4 text-lg">Programs</h4>
             <ul className="space-y-3">
-              <li><a href="#programs" className="text-gray-400 hover:text-emerald-400 transition-colors">Group Cohorts</a></li>
-              <li><a href="#programs" className="text-gray-400 hover:text-emerald-400 transition-colors">Founder 1:1 Coaching</a></li>
-              <li><a href="#method" className="text-gray-400 hover:text-emerald-400 transition-colors">The Clovrr Method</a></li>
+              <li><a href="/#programs" className="text-gray-400 hover:text-emerald-400 transition-colors">Group Cohorts</a></li>
+              <li><a href="/#programs" className="text-gray-400 hover:text-emerald-400 transition-colors">Founder 1:1 Coaching</a></li>
+              <li><a href="/#method" className="text-gray-400 hover:text-emerald-400 transition-colors">The Clovrr Method</a></li>
             </ul>
           </div>
 
@@ -50,8 +51,8 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Clovrr STEM Learning. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</a>
+            <Link to="/privacy-policy" className="text-gray-500 hover:text-white text-sm transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="text-gray-500 hover:text-white text-sm transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

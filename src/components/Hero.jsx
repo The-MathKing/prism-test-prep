@@ -32,14 +32,14 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-primary hover:bg-primary-hover text-white font-semibold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(5,150,105,0.4)] flex items-center justify-center gap-2">
+            <a href="https://forms.google.com/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 rounded-full bg-primary hover:bg-primary-hover text-white font-semibold text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(5,150,105,0.4)] flex items-center justify-center gap-2">
               Enroll Student
               <ArrowRight className="h-5 w-5" />
-            </button>
+            </a>
             
-            <button className="w-full sm:w-auto px-8 py-4 rounded-full glass hover:bg-white/10 text-white font-semibold text-lg transition-all flex items-center justify-center">
+            <a href="https://forms.google.com/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto px-8 py-4 rounded-full glass hover:bg-white/10 text-white font-semibold text-lg transition-all flex items-center justify-center">
               Partner With Us (CSR)
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>
