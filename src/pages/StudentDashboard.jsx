@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Hexagon, BookOpen, Video, Calendar, FileText, LogOut, LayoutDashboard } from 'lucide-react';
+import { Clover, BookOpen, Video, Calendar, FileText, LogOut, LayoutDashboard } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const StudentDashboard = () => {
@@ -11,7 +11,7 @@ const StudentDashboard = () => {
       <aside className="w-64 border-r border-white/10 bg-[#0a0a0a] flex flex-col hidden md:flex">
         <div className="h-20 flex items-center px-6 border-b border-white/10">
           <Link to="/" className="flex items-center gap-2">
-            <Hexagon className="text-primary h-8 w-8" />
+            <Clover className="text-primary h-8 w-8" />
             <span className="font-sans font-black text-xl tracking-tighter text-white">Clovrr.</span>
           </Link>
         </div>
@@ -114,7 +114,7 @@ const StudentDashboard = () => {
                   <div className="bg-[#111] border border-white/10 rounded-2xl overflow-hidden">
                     <div className="p-8 text-center text-gray-500 flex flex-col items-center">
                       <div className="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mb-4">
-                        <Hexagon className="h-8 w-8 text-gray-600" />
+                        <Clover className="h-8 w-8 text-gray-600" />
                       </div>
                       <p className="font-medium text-gray-400">All caught up!</p>
                       <p className="text-sm mt-1">No pending assignments at the moment.</p>

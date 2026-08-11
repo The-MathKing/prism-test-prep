@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Hexagon, CreditCard, HeartHandshake, TrendingUp, LogOut, LayoutDashboard, User } from 'lucide-react';
+import { Clover, CreditCard, HeartHandshake, TrendingUp, LogOut, LayoutDashboard, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ParentDashboard = () => {
@@ -11,7 +11,7 @@ const ParentDashboard = () => {
       <aside className="w-64 border-r border-white/10 bg-[#0a0a0a] flex flex-col hidden md:flex">
         <div className="h-20 flex items-center px-6 border-b border-white/10">
           <Link to="/" className="flex items-center gap-2">
-            <Hexagon className="text-primary h-8 w-8" />
+            <Clover className="text-primary h-8 w-8" />
             <span className="font-sans font-black text-xl tracking-tighter text-white">Clovrr.</span>
           </Link>
         </div>

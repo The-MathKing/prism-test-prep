@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hexagon, Mail, MapPin } from 'lucide-react';
+import { Clover, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
           
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <Hexagon className="text-primary h-8 w-8" />
+              <Clover className="text-primary h-8 w-8" />
               <span className="font-sans font-bold text-2xl tracking-tight text-white">Clovrr</span>
             </div>
             <p className="text-gray-400 max-w-sm mb-6">

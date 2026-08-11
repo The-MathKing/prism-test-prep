@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Hexagon, ArrowRight, User, Users, GraduationCap, Building } from 'lucide-react';
+import { Clover, ArrowRight, User, Users, GraduationCap, Building } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -24,11 +24,11 @@ const Login = () => {
       <div className="w-full max-w-md px-6 relative z-10">
         <div className="flex flex-col items-center mb-10">
           <Link to="/" className="flex items-center gap-2 mb-8 hover:scale-105 transition-transform">
-            <Hexagon className="text-primary h-10 w-10" />
+            <Clover className="text-primary h-10 w-10" />
             <span className="font-sans font-black text-3xl tracking-tighter text-white">Clovrr.</span>
           </Link>
           <h2 className="text-2xl font-bold text-white mb-2">Welcome back</h2>
-          <p className="text-gray-400 text-sm">Select your role and sign in</p>
+          <p className="text-gray-400 text-sm text-center">Select your role and sign in with your provided credentials.<br/>(Note: We do not offer self-registration. Contact administration for access).</p>
         </div>
 
         <div className="bg-[#0a0a0a] rounded-3xl border border-white/10 shadow-2xl p-8">
@@ -92,7 +92,7 @@ const Login = () => {
             </div>
 
             <button type="submit" className="w-full bg-emerald-500 hover:bg-emerald-400 text-black font-bold py-3.5 rounded-xl transition-colors flex items-center justify-center gap-2 mt-4">
-              Sign In to Demo
+              Sign In
               <ArrowRight className="h-4 w-4" />
             </button>
           </form>

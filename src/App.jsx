@@ -8,6 +8,7 @@ import ParentDashboard from './pages/ParentDashboard';
 import PartnerDashboard from './pages/PartnerDashboard';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import LeadershipPage from './pages/LeadershipPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/partner-dashboard" element={<PartnerDashboard />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/leadership" element={<LeadershipPage />} />
         </Routes>
       </Router>
     </div>
