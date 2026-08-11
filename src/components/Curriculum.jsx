@@ -50,7 +50,7 @@ const categories = [
     id: 'elite',
     title: 'Elite & Competitive',
     subtitle: 'Grades 6–10',
-    description: 'Premium tiers anchored by tutors with perfect SAT scores and national olympiad awards.',
+    description: 'Premium tiers anchored by instructors with perfect SAT scores and national olympiad awards.',
     courses: [
       {
         name: 'MATHCOUNTS / AMC 8',

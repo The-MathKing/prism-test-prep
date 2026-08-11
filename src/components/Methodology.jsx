@@ -14,7 +14,7 @@ const cards = [
     number: '02',
     title: 'Role-Model Mentorship',
     description:
-      'We don\'t just teach math; we show students what mathematical excellence looks like. By learning directly from mentors with perfect SAT scores and national olympiad awards, your child gains both an elite tutor and an inspiring role model.',
+      'We don\'t just teach math; we show students what mathematical excellence looks like. By learning directly from mentors with perfect SAT scores and national olympiad awards, your child gains both an elite mentor and an inspiring role model.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />

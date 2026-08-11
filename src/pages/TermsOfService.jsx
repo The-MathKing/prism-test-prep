@@ -18,7 +18,7 @@ const TermsOfService = () => {
 
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-emerald-400">2. Educational Services & Disclaimer</h2>
-            <p>Clovrr STEM Learning provides near-peer mentoring and tutoring services for STEM subjects (Grades 1-10). While we employ high-achieving mentors and rigorous curriculum, educational outcomes depend heavily on the individual student's effort. We do not guarantee specific grades, test scores, or competition placements (e.g., MATHCOUNTS, USACO).</p>
+            <p>Clovrr STEM Learning provides near-peer mentoring services for STEM subjects (Grades 1-10). While we employ high-achieving mentors and rigorous curriculum, educational outcomes depend heavily on the individual student's effort. We do not guarantee specific grades, test scores, or competition placements (e.g., MATHCOUNTS, USACO).</p>
           </section>
 
           <section className="space-y-4">

@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Hexagon, Users, Calendar, Settings, LogOut, LayoutDashboard } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const InstructorDashboard = () => {
+  const [activeTab, setActiveTab] = useState('dashboard');
+
   return (
     <div className="min-h-screen bg-[#050505] flex">
       {/* Sidebar */}
-      <aside className="w-64 border-r border-white/10 bg-[#0a0a0a] flex flex-col">
+      <aside className="w-64 border-r border-white/10 bg-[#0a0a0a] flex flex-col hidden md:flex">
         <div className="h-20 flex items-center px-6 border-b border-white/10">
           <Link to="/" className="flex items-center gap-2">
             <Hexagon className="text-primary h-8 w-8" />
@@ -14,25 +16,37 @@ const InstructorDashboard = () => {
           </Link>
         </div>
         <nav className="flex-1 py-6 px-4 space-y-2">
-          <a href="#" className="flex items-center gap-3 px-4 py-3 bg-emerald-500/10 text-emerald-400 rounded-xl font-medium border border-emerald-500/20">
+          <button 
+            onClick={() => setActiveTab('dashboard')}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-colors ${activeTab === 'dashboard' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'text-gray-400 hover:text-white hover:bg-white/5 border border-transparent'}`}
+          >
             <LayoutDashboard className="h-5 w-5" />
             Dashboard
-          </a>
-          <a href="#" className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl font-medium transition-colors">
+          </button>
+          <button 
+            onClick={() => setActiveTab('cohorts')}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-colors ${activeTab === 'cohorts' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'text-gray-400 hover:text-white hover:bg-white/5 border border-transparent'}`}
+          >
             <Users className="h-5 w-5" />
             My Cohorts
-          </a>
-          <a href="#" className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl font-medium transition-colors">
+          </button>
+          <button 
+            onClick={() => setActiveTab('schedule')}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-colors ${activeTab === 'schedule' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'text-gray-400 hover:text-white hover:bg-white/5 border border-transparent'}`}
+          >
             <Calendar className="h-5 w-5" />
             Schedule
-          </a>
-          <a href="#" className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl font-medium transition-colors">
+          </button>
+          <button 
+            onClick={() => setActiveTab('settings')}
+            className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-colors ${activeTab === 'settings' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'text-gray-400 hover:text-white hover:bg-white/5 border border-transparent'}`}
+          >
             <Settings className="h-5 w-5" />
             Settings
-          </a>
+          </button>
         </nav>
         <div className="p-4 border-t border-white/10">
-          <Link to="/login" className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-red-400 hover:bg-red-400/10 rounded-xl font-medium transition-colors">
+          <Link to="/login" className="flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-red-400 hover:bg-red-400/10 rounded-xl font-medium transition-colors w-full">
             <LogOut className="h-5 w-5" />
             Sign Out
           </Link>
@@ -42,7 +56,7 @@ const InstructorDashboard = () => {
       {/* Main Content */}
       <main className="flex-1 overflow-y-auto">
         <header className="h-20 border-b border-white/10 flex items-center justify-between px-8 bg-[#0a0a0a]/50 backdrop-blur-md sticky top-0 z-10">
-          <h1 className="text-xl font-bold text-white">Overview</h1>
+          <h1 className="text-xl font-bold text-white capitalize">{activeTab === 'dashboard' ? 'Overview' : activeTab}</h1>
           <div className="flex items-center gap-4">
             <div className="text-right hidden md:block">
               <div className="text-sm font-bold text-white">Aryan Padarthi</div>
@@ -55,29 +69,59 @@ const InstructorDashboard = () => {
         </header>
 
         <div className="p-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-[#111] border border-white/10 rounded-2xl p-6">
-              <h3 className="text-gray-400 text-sm font-medium mb-2">Active Students</h3>
-              <div className="text-3xl font-bold text-white">24</div>
-            </div>
-            <div className="bg-[#111] border border-white/10 rounded-2xl p-6">
-              <h3 className="text-gray-400 text-sm font-medium mb-2">Upcoming Sessions</h3>
-              <div className="text-3xl font-bold text-white">8</div>
-            </div>
-            <div className="bg-[#111] border border-white/10 rounded-2xl p-6">
-              <h3 className="text-gray-400 text-sm font-medium mb-2">Hours Logged (Week)</h3>
-              <div className="text-3xl font-bold text-white">12.5</div>
-            </div>
-          </div>
+          {activeTab === 'dashboard' && (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-[#111] border border-white/10 rounded-2xl p-6">
+                  <h3 className="text-gray-400 text-sm font-medium mb-2">Active Students</h3>
+                  <div className="text-3xl font-bold text-white">24</div>
+                </div>
+                <div className="bg-[#111] border border-white/10 rounded-2xl p-6">
+                  <h3 className="text-gray-400 text-sm font-medium mb-2">Upcoming Sessions</h3>
+                  <div className="text-3xl font-bold text-white">8</div>
+                </div>
+                <div className="bg-[#111] border border-white/10 rounded-2xl p-6">
+                  <h3 className="text-gray-400 text-sm font-medium mb-2">Hours Logged (Week)</h3>
+                  <div className="text-3xl font-bold text-white">12.5</div>
+                </div>
+              </div>
 
-          <h2 className="text-lg font-bold text-white mb-4">Today's Schedule</h2>
-          <div className="bg-[#111] border border-white/10 rounded-2xl overflow-hidden">
-            <div className="p-6 text-center text-gray-500 py-12">
-              <Calendar className="h-12 w-12 mx-auto mb-4 opacity-50" />
-              <p>No more sessions scheduled for today.</p>
-              <button className="mt-4 text-emerald-500 font-medium hover:text-emerald-400">View Full Schedule</button>
+              <h2 className="text-lg font-bold text-white mb-4">Today's Schedule</h2>
+              <div className="bg-[#111] border border-white/10 rounded-2xl overflow-hidden">
+                <div className="p-6 text-center text-gray-500 py-12">
+                  <Calendar className="h-12 w-12 mx-auto mb-4 opacity-50" />
+                  <p>No more sessions scheduled for today.</p>
+                  <button 
+                    onClick={() => setActiveTab('schedule')}
+                    className="mt-4 text-emerald-500 font-medium hover:text-emerald-400"
+                  >
+                    View Full Schedule
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
+
+          {activeTab === 'cohorts' && (
+            <div className="bg-[#111] border border-white/10 rounded-2xl p-8 text-center text-gray-500">
+              <Users className="h-12 w-12 mx-auto mb-4 opacity-50" />
+              <p>Your cohort rosters will appear here.</p>
             </div>
-          </div>
+          )}
+
+          {activeTab === 'schedule' && (
+            <div className="bg-[#111] border border-white/10 rounded-2xl p-8 text-center text-gray-500">
+              <Calendar className="h-12 w-12 mx-auto mb-4 opacity-50" />
+              <p>Your calendar view is currently empty.</p>
+            </div>
+          )}
+
+          {activeTab === 'settings' && (
+            <div className="bg-[#111] border border-white/10 rounded-2xl p-8 text-center text-gray-500">
+              <Settings className="h-12 w-12 mx-auto mb-4 opacity-50" />
+              <p>Profile and notification settings.</p>
+            </div>
+          )}
         </div>
       </main>
     </div>

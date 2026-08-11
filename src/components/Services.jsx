@@ -42,7 +42,7 @@ export default function Services() {
                 </span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold mb-4">
-                Premium Math Tutoring
+                Premium Math Mentoring
               </h3>
               <div className="flex items-baseline gap-1">
                 <span className="text-5xl sm:text-6xl font-black text-gradient">$50</span>

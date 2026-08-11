@@ -77,7 +77,7 @@ const SubjectCatalog = () => {
             <div className="text-3xl font-bold text-emerald-400 mb-6">$20<span className="text-lg text-gray-400 font-medium">/hr per student</span></div>
             <ul className="space-y-3 mb-8 flex-grow">
               <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 className="h-5 w-5 text-emerald-500" /> 4 to 6 Students Max</li>
-              <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 className="h-5 w-5 text-emerald-500" /> Taught by Specialized Peer Tutors</li>
+              <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 className="h-5 w-5 text-emerald-500" /> Taught by Specialized Peer Instructors</li>
               <li className="flex items-center gap-2 text-gray-300"><CheckCircle2 className="h-5 w-5 text-emerald-500" /> Weekly Interactive Digital Classrooms</li>
             </ul>
             <button className="w-full py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-medium transition-colors border border-white/10">

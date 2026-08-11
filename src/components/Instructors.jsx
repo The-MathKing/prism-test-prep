@@ -27,14 +27,14 @@ const badges = [
 
 export default function Instructors() {
   return (
-    <section id="tutors" className="relative py-24 sm:py-32 bg-navy">
+    <section id="instructors" className="relative py-24 sm:py-32 bg-navy">
       {/* Top border glow */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-electric/20 to-transparent" />
 
       <div className="max-w-5xl mx-auto px-6 text-center">
         {/* Section header */}
         <span className="text-xs font-semibold text-electric uppercase tracking-[0.2em] mb-4 block">
-          Our Tutors
+          Our Instructors
         </span>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
           Olympiad-Level Minds.{' '}
